@@ -1,0 +1,70 @@
+1) Посмотреть где я.
+	pwd  
+2) Создать папку.
+	mkdir Zadanie_1
+3) Зайти в папку.  
+	cd Zadanie_1 
+4) Создать 3 папки. 
+	mkdir test1 test2 test3 
+5) Зайти в любую папку.
+	cd test1
+6) Создать 5 файлов (3 txt, 2 json) 
+	touch file1.txt file2.txt file3.txt name.json name2.json
+7) Создать 3 папки.
+	mkdir papka1 papka2 papka3
+8) Вывести список содержимого папки.
+	ls -la
+9-11) Открыть любой txt файл. + написать туда что-нибудь. + сохранить и выйти.
+	cat > file1.txt 
+	"текст" 
+	ctrl + d
+12) Выйти из папки на уровень выше.
+	cd ..
+
+13) Переместить любые 2 файла, который вы создали, в любую другую папку. 
+	cd Zadanie_1
+	mv test2/file1.txt test3/
+	mv test2/file3.txt test1/
+
+14) Скопировать любые 2 файла, которые вы создали, в любую другую папку.
+	cp test1/file2.txt test1/1/
+   	cp test1/name.json test1/2/
+
+15) Найти файл по имени.
+	cd test2
+	find -name name2.json
+
+16) Просмотреть содержимое в реальном времени.
+	cd Zadanie_1/test1/1 
+    	tail -f file2.txt  
+
+17) Вывести несколько первых строк из текстового файла.
+	head -n 2 1/file2.txt 
+18) Вывести несколько последних строк из текстового файла.
+	tail -n 2 1/file2.txt
+19) Просмотреть содержимое длинного файла.
+	less file2.txt
+20) Вывести дату и время. 
+	date  ( Wed Apr 6 15:57:33 2022 )
+
+
+Задание*
+1) Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request.
+	curl http://162.55.220.72:5005/terminal-hw-request
+	curl 'http://162.55.220.72:5005/get_method?name='Alex'&age=29'
+2) Написать скрипт который выполнит автоматически пункты 3,4,5,6,7,8,13
+
+	nano script.sh
+
+ 	!#bin/bash
+
+	mkdir Myscript
+	cd Myscript
+	mkdir Sony1 Sony2 Sony3
+	cd Sony1
+	touch 1.txt 2.txt 3.txt 10.json 20.json
+	mkdir Marshall1 Marshall2 Marshall3
+	ls
+	mv 10.json 1.txt Marshall2
+
+
